@@ -28,8 +28,21 @@ class State(Model):
     successors = ManyToManyField('State', related_name='predecessors', help_text='Successor states')
     # TODO: Should we add an overlord ForeignKey('State')?
     # Not sure how it would work since some states are only temporarily ruled over by others, e.g. Norway
-    # Relationships will have to be their own table
+    # Relationships may have to be their own table
     color = TextField(help_text='I expect this to be the most controversial field.')
+
+    def get_bordering_states(self, date):
+        """
+        Returns list of states bordering it @date.
+        TODO: This is just skeleton code until get_bordering_shapes works
+        """
+        shapes_at_date = self.shape_set.filter(start_date__lte=date, end_date__gte=date)
+        bordering_states = set()
+        for shape in shapes_at_date:
+            bordering_shapes = shape.get_bordering_shapes(date)
+            for bordering_shape in bordering_shapes:
+                bordering_states.add(bordering_shape.state)
+        return bordering_states
 
     def __str__(self):
         return self.name
@@ -55,9 +68,9 @@ class Shape(Model):  # Should this just be called Border?
 
     def get_bordering_shapes(self, date=None):
         """
-        TODO: This property should return the list of shapes that border it at time date.
+        TODO: This should return the list of shapes that border it @date.
         If date is None, it should return all shapes thar border it throughout its existence.
-        I imagine it will require a custom PostGIS query.
+        I imagine this will require a custom PostGIS query.
         """
         pass
 
