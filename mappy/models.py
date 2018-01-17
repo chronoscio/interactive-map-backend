@@ -26,6 +26,9 @@ class State(Model):
     # country_id = TextField(primary_key=True, help_text='Internal country code for unique internal identification')
     description = TextField(help_text='Links, flavor text, etc.', blank=True)
     successors = ManyToManyField('State', related_name='predecessors', help_text='Successor states')
+    # TODO: Should we add an overlord ForeignKey('State')?
+    # Not sure how it would work since some states are only temporarily ruled over by others, e.g. Norway
+    # Relationships will have to be their own table
     color = TextField(help_text='I expect this to be the most controversial field.')
 
     def __str__(self):
@@ -50,14 +53,26 @@ class Shape(Model):  # Should this just be called Border?
     end_event = ForeignKey('Event', on_delete=SET_NULL, null=True, blank=True, related_name='prior_borders',
                            help_text="If this field is set, this event's date overwrites the end_date")
 
-    def __str__(self):
-        return f'{self.state}: {self.start_date} to {self.end_date}'
+    def get_bordering_shapes(self, date=None):
+        """
+        TODO: This property should return the list of shapes that border it at time date.
+        If date is None, it should return all shapes thar border it throughout its existence.
+        I imagine it will require a custom PostGIS query.
+        """
+        pass
 
     def clean(self):
+        """
+        Sets the start/end_date to the date of the associated events?
+        This will need to be called again if the event's date ever changes.
+        """
         if self.start_event:
             self.start_date = self.start_event.date
         if self.end_event:
             self.end_date = self.end_event.date
+
+    def __str__(self):
+        return f'{self.state}: {self.start_date} to {self.end_date}'
 
 
 class Event(Model):
@@ -75,3 +90,11 @@ class Event(Model):
 
     def __str__(self):
         return f'{self.name}: {self.date}'
+
+
+class DiplomaticRelation(Model):
+    """
+    Abstract class for relationships between states, including wars, alliances, overlordships, etc.
+    This is a whole 'nother project that should probably be primarily populated by Wikipedia scraping
+    """
+    pass
