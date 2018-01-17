@@ -25,7 +25,7 @@ class State(Model):
     # go through many name changes
     # country_id = TextField(primary_key=True, help_text='Internal country code for unique internal identification')
     description = TextField(help_text='Links, flavor text, etc.', blank=True)
-    successors = ManyToManyField('State', related_name='predecessors', help_text='Successor states')
+    successors = ManyToManyField('State', related_name='predecessors', help_text='Successor states', blank=True)
     # TODO: Should we add an overlord ForeignKey('State')?
     # Not sure how it would work since some states are only sporadically ruled over by others, e.g. Norway
     # It will be necessary if we want colonies to be separate states from their overlords.
@@ -73,9 +73,11 @@ class Shape(Model):  # Should this just be called Border?
         """
         TODO: This should return the list of shapes that border it @date.
         If date is None, it should return all shapes thar border it throughout its existence.
-        I imagine this will require a custom PostGIS query.
+        I imagine this will require a custom PostGIS query. Or maybe just the __touches GeoDjango query.
         """
         pass
+        shapes_at_date = Shape.objects.filter(start_date__lte=date, end_date__gte=date)
+        # shape__touches=self.shape
 
     def clean(self):
         """

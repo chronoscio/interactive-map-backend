@@ -15,7 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import include
+from rest_framework.routers import DefaultRouter
+
+from mappy.views import StateViewSet, ShapeViewSet
+
+router = DefaultRouter()
+router.register('states', StateViewSet)
+router.register('shapes', ShapeViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # TODO: This isn't the right way to do this. Fix plz.
+    path('api/', include(router.urls))
 ]
