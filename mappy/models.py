@@ -16,7 +16,7 @@ class State(Model):
     # e.g. Do we want to call France something different from 1789-1805? Do we want the Roman Empire
     # to live on as the Byzantine? Am I overthinking this?
     # TODO: On the other end of the spectrum, should we make 'name' the primary key? This could be
-    # our desired unique identifier if there are no conflicts
+    # our desired unique identifier if they are all unique
     name = TextField(help_text='Canonical name -- each state should have only one.')
     aliases = TextField(help_text='CSV of alternative names this state may be known by.', blank=True)
     # TODO: Do we need an internal unique country_id for every State? (IMO no)
@@ -27,7 +27,9 @@ class State(Model):
     description = TextField(help_text='Links, flavor text, etc.', blank=True)
     successors = ManyToManyField('State', related_name='predecessors', help_text='Successor states')
     # TODO: Should we add an overlord ForeignKey('State')?
-    # Not sure how it would work since some states are only temporarily ruled over by others, e.g. Norway
+    # Not sure how it would work since some states are only sporadically ruled over by others, e.g. Norway
+    # It will be necessary if we want colonies to be separate states from their overlords.
+    # overlord = ForeignKey('State', related_name='subject', null=True, blank=True)
     # Relationships may have to be their own table
     color = TextField(help_text='I expect this to be the most controversial field.')
 
@@ -58,7 +60,8 @@ class Shape(Model):  # Should this just be called Border?
     # TODO: Figure out the right way to store the shapefile here. PolygonField feels like the right approach, but is it?
     # Progress! It will probably involve LayerMapping (https://docs.djangoproject.com/en/2.0/ref/contrib/gis/layermapping/)
     # TODO: Add this field once this app is dockerized and Postgres + PostGIS are working
-    # shape = PolygonField()
+    # shape = MultiPolygonField()
+    source = TextField(help_text='Citation for where you found this map. Guide: http://rmit.libguides.com/harvardvisual/maps.')
     start_date = DateField(help_text='When this border takes effect.')
     start_event = ForeignKey('Event', on_delete=SET_NULL, null=True, blank=True, related_name='new_borders',
                              help_text="If this field is set, this event's date overwrites the start_date")
@@ -108,6 +111,6 @@ class Event(Model):
 class DiplomaticRelation(Model):
     """
     Abstract class for relationships between states, including wars, alliances, overlordships, etc.
-    This is a whole 'nother project that should probably be primarily populated by Wikipedia scraping
+    This would be a whole 'nother project that should probably be primarily populated by Wikipedia scraping
     """
     pass
