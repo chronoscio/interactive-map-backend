@@ -1,3 +1,5 @@
+from django.core.exceptions import ValidationError
+from django.utils.translation import gettext_lazy as _
 from django.db.models import Model, TextField, DateField, ForeignKey, ManyToManyField, CASCADE, SET_NULL
 # Never use Charfield. Always use TextField. Postgres treats them the same anyways
 # from django.contrib.gis.db.models import PolygonField
@@ -14,36 +16,23 @@ class State(Model):
     # e.g. Do we want to call France something different from 1789-1805? Do we want the Roman Empire
     # to live on as the Byzantine? Am I overthinking this?
     # TODO: On the other end of the spectrum, should we make 'name' the primary key? This could be
-    # our desired unique identifier
+    # our desired unique identifier if there are no conflicts
     name = TextField(help_text='Canonical name -- each state should have only one.')
-    aliases = TextField(help_text='Other names this state may be known by.', null=True, blank=True)
+    aliases = TextField(help_text='CSV of alternative names this state may be known by.', blank=True)
     # TODO: Do we need an internal unique country_id for every State? (IMO no)
     # Requiring it would be laborious and cumbersome (we need a consistent hashing schema, and conflict
     # resolution may be controversial). On the other hand, it may be helpful to handle states that
     # go through many name changes
     # country_id = TextField(primary_key=True, help_text='Internal country code for unique internal identification')
-    description = TextField(help_text='Links, flavor text, etc.', null=True, blank=True)
+    description = TextField(help_text='Links, flavor text, etc.', blank=True)
+    successors = ManyToManyField('State', related_name='predecessors', help_text='Successor states')
     color = TextField(help_text='I expect this to be the most controversial field.')
 
     def __str__(self):
         return self.name
 
 
-class Event(Model):
-    """
-    An Event is a date associated with some flavor text and optionally the States affected.
-    It may be further associated with a border change via the start_event and end_event in Shapes
-    """
-    name = TextField(help_text='Canonical name of the event')
-    date = DateField()
-    states = ManyToManyField(State, help_text='State(s) affected by this event.')
-    description = TextField(help_text='Flavor text, Wikipedia, etc.', null=True, blank=True)
-
-    def __str__(self):
-        return f'{self.name}: {self.date}'
-
-
-class Shape(Model):
+class Shape(Model):  # Should this just be called Border?
     """
     A Shape is a region polygon associated with a State from a start_date to an end_date.
     This should accomodate States with discontiguous territories and existences.
@@ -55,9 +44,34 @@ class Shape(Model):
     # TODO: Add this field once this app is dockerized and Postgres + PostGIS are working
     # shape = PolygonField()
     start_date = DateField(help_text='When this border takes effect.')
-    start_event = ForeignKey(Event, on_delete=SET_NULL, null=True, blank=True, related_name='start_event')
+    start_event = ForeignKey('Event', on_delete=SET_NULL, null=True, blank=True, related_name='new_borders',
+                             help_text="If this field is set, this event's date overwrites the start_date")
     end_date = DateField(help_text='When this border ceases to exist.')
-    end_event = ForeignKey(Event, on_delete=SET_NULL, null=True, blank=True, related_name='end_event')
+    end_event = ForeignKey('Event', on_delete=SET_NULL, null=True, blank=True, related_name='prior_borders',
+                           help_text="If this field is set, this event's date overwrites the end_date")
 
     def __str__(self):
         return f'{self.state}: {self.start_date} to {self.end_date}'
+
+    def clean(self):
+        if self.start_event:
+            self.start_date = self.start_event.date
+        if self.end_event:
+            self.end_date = self.end_event.date
+
+
+class Event(Model):
+    """
+    An Event is a date associated with some flavor text and optionally the States affected.
+    It may be further associated with a border change via the start_event and end_event in Shapes
+    """
+    name = TextField(help_text='Canonical name of the event')
+    date = DateField()
+    # TODO: Add an end_date to simulate ranged events?
+    # IMO No, we should only care about events that cause border changes on this map.
+    # If a range is ever necessary, just name the event "Start of X" or "End of X"
+    states = ManyToManyField('State', help_text='State(s) affected by this event.')
+    description = TextField(help_text='Flavor text, Wikipedia, etc.', blank=True)
+
+    def __str__(self):
+        return f'{self.name}: {self.date}'
