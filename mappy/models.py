@@ -2,7 +2,7 @@ from django.core.exceptions import ValidationError
 from django.utils.translation import gettext_lazy as _
 from django.db.models import Model, TextField, DateField, ForeignKey, ManyToManyField, CASCADE, SET_NULL
 # Never use Charfield. Always use TextField. Postgres treats them the same anyways
-# from django.contrib.gis.db.models import MultiPolygonField
+from django.contrib.gis.db.models import MultiPolygonField
 
 
 class State(Model):
@@ -60,7 +60,7 @@ class Shape(Model):  # Should this just be called Border?
     # TODO: Figure out the right way to store the shapefile here. PolygonField feels like the right approach, but is it?
     # Progress! It will probably involve LayerMapping (https://docs.djangoproject.com/en/2.0/ref/contrib/gis/tutorial/#importing-spatial-data)
     # TODO: Add this field once this app is dockerized and Postgres + PostGIS are working
-    # shape = MultiPolygonField()
+    shape = MultiPolygonField()
     source = TextField(help_text='Citation for where you found this map. Guide: http://rmit.libguides.com/harvardvisual/maps.')
     start_date = DateField(help_text='When this border takes effect.')
     start_event = ForeignKey('Event', on_delete=SET_NULL, null=True, blank=True, related_name='new_borders',

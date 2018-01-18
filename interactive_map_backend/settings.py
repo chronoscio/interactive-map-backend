@@ -79,8 +79,12 @@ WSGI_APPLICATION = 'interactive_map_backend.wsgi.application'
 # TODO: Dockerize and add Postgres+PostGIS
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': 'interactivemap',
+        'USER': 'dwaxe',
+        'PASSWORD': 'asdf1234',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 

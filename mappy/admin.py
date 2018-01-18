@@ -1,4 +1,5 @@
-from django.contrib import admin
+# from django.contrib import admin
+from django.contrib.gis import admin
 from .models import State, Event, Shape
 
 
@@ -11,5 +12,5 @@ class EventAdmin(admin.ModelAdmin):
     pass
 
 @admin.register(Shape)
-class ShapeAdmin(admin.ModelAdmin):
+class ShapeAdmin(admin.OSMGeoAdmin):
     pass
