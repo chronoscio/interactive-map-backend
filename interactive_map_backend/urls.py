@@ -20,12 +20,11 @@ from rest_framework.routers import DefaultRouter
 
 from mappy.views import StateViewSet, ShapeViewSet
 
-router = DefaultRouter()
+router = DefaultRouter(trailing_slash=False)
 router.register('states', StateViewSet)
 router.register('shapes', ShapeViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # TODO: This isn't the right way to do this. Fix plz.
-    path('api/', include(router.urls))
+    path('api/', include(router.urls), namespace='api')
 ]
