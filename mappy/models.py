@@ -33,6 +33,14 @@ class State(Model):
     # Relationships may have to be their own table
     color = TextField(help_text='I expect this to be the most controversial field.')
 
+    @property
+    def start_date(self):
+        return self.shape_set.order_by('start_date').first().start_date
+
+    @property
+    def end_date(self):
+        return self.shape_set.order_by('end_date').last().end_date
+
     def get_bordering_states(self, date):
         """
         Returns list of states bordering it @date.

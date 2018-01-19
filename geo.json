@@ -4,7 +4,8 @@
       "type": "Feature",
       "id": "AFG",
       "properties": {
-        "name": "Afghanistan"
+        "name": "Afghanistan",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -87,7 +88,8 @@
       "type": "Feature",
       "id": "AGO",
       "properties": {
-        "name": "Angola"
+        "name": "Angola",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -182,7 +184,8 @@
       "type": "Feature",
       "id": "ALB",
       "properties": {
-        "name": "Albania"
+        "name": "Albania",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -218,7 +221,8 @@
       "type": "Feature",
       "id": "ARE",
       "properties": {
-        "name": "United Arab Emirates"
+        "name": "United Arab Emirates",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -254,7 +258,8 @@
       "type": "Feature",
       "id": "ARG",
       "properties": {
-        "name": "Argentina"
+        "name": "Argentina",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -395,7 +400,8 @@
       "type": "Feature",
       "id": "ARM",
       "properties": {
-        "name": "Armenia"
+        "name": "Armenia",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -429,7 +435,8 @@
       "type": "Feature",
       "id": "ATA",
       "properties": {
-        "name": "Antarctica"
+        "name": "Antarctica",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -1129,7 +1136,8 @@
       "type": "Feature",
       "id": "ATF",
       "properties": {
-        "name": "French Southern and Antarctic Lands"
+        "name": "French Southern and Antarctic Lands",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -1152,7 +1160,8 @@
       "type": "Feature",
       "id": "AUS",
       "properties": {
-        "name": "Australia"
+        "name": "Australia",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -1413,7 +1422,8 @@
       "type": "Feature",
       "id": "AUT",
       "properties": {
-        "name": "Austria"
+        "name": "Austria",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -1464,7 +1474,8 @@
       "type": "Feature",
       "id": "AZE",
       "properties": {
-        "name": "Azerbaijan"
+        "name": "Azerbaijan",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -1528,7 +1539,8 @@
       "type": "Feature",
       "id": "BDI",
       "properties": {
-        "name": "Burundi"
+        "name": "Burundi",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -1555,7 +1567,8 @@
       "type": "Feature",
       "id": "BEL",
       "properties": {
-        "name": "Belgium"
+        "name": "Belgium",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -1584,7 +1597,8 @@
       "type": "Feature",
       "id": "BEN",
       "properties": {
-        "name": "Benin"
+        "name": "Benin",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -1623,7 +1637,8 @@
       "type": "Feature",
       "id": "BFA",
       "properties": {
-        "name": "Burkina Faso"
+        "name": "Burkina Faso",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -1676,7 +1691,8 @@
       "type": "Feature",
       "id": "BGD",
       "properties": {
-        "name": "Bangladesh"
+        "name": "Bangladesh",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -1726,7 +1742,8 @@
       "type": "Feature",
       "id": "BGR",
       "properties": {
-        "name": "Bulgaria"
+        "name": "Bulgaria",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -1768,7 +1785,8 @@
       "type": "Feature",
       "id": "BHS",
       "properties": {
-        "name": "The Bahamas"
+        "name": "The Bahamas",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -1813,7 +1831,8 @@
       "type": "Feature",
       "id": "BIH",
       "properties": {
-        "name": "Bosnia and Herzegovina"
+        "name": "Bosnia and Herzegovina",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -1849,7 +1868,8 @@
       "type": "Feature",
       "id": "BLR",
       "properties": {
-        "name": "Belarus"
+        "name": "Belarus",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -1907,7 +1927,8 @@
       "type": "Feature",
       "id": "BLZ",
       "properties": {
-        "name": "Belize"
+        "name": "Belize",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -1941,7 +1962,8 @@
       "type": "Feature",
       "id": "BMU",
       "properties": {
-        "name": "Bermuda"
+        "name": "Bermuda",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -2041,7 +2063,8 @@
       "type": "Feature",
       "id": "BOL",
       "properties": {
-        "name": "Bolivia"
+        "name": "Bolivia",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -2115,7 +2138,8 @@
       "type": "Feature",
       "id": "BRA",
       "properties": {
-        "name": "Brazil"
+        "name": "Brazil",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -2332,7 +2356,8 @@
       "type": "Feature",
       "id": "BRN",
       "properties": {
-        "name": "Brunei"
+        "name": "Brunei",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -2354,7 +2379,8 @@
       "type": "Feature",
       "id": "BTN",
       "properties": {
-        "name": "Bhutan"
+        "name": "Bhutan",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -2381,7 +2407,8 @@
       "type": "Feature",
       "id": "BWA",
       "properties": {
-        "name": "Botswana"
+        "name": "Botswana",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -2435,7 +2462,8 @@
       "type": "Feature",
       "id": "CAF",
       "properties": {
-        "name": "Central African Republic"
+        "name": "Central African Republic",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -2511,7 +2539,8 @@
       "type": "Feature",
       "id": "CAN",
       "properties": {
-        "name": "Canada"
+        "name": "Canada",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -3435,7 +3464,8 @@
       "type": "Feature",
       "id": "CHE",
       "properties": {
-        "name": "Switzerland"
+        "name": "Switzerland",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -3473,7 +3503,8 @@
       "type": "Feature",
       "id": "CHL",
       "properties": {
-        "name": "Chile"
+        "name": "Chile",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -3607,7 +3638,8 @@
       "type": "Feature",
       "id": "CHN",
       "properties": {
-        "name": "China"
+        "name": "China",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -3867,7 +3899,8 @@
       "type": "Feature",
       "id": "CIV",
       "properties": {
-        "name": "Ivory Coast"
+        "name": "Ivory Coast",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -3927,7 +3960,8 @@
       "type": "Feature",
       "id": "CMR",
       "properties": {
-        "name": "Cameroon"
+        "name": "Cameroon",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -4002,7 +4036,8 @@
       "type": "Feature",
       "id": "COD",
       "properties": {
-        "name": "Democratic Republic of the Congo"
+        "name": "Democratic Republic of the Congo",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -4138,7 +4173,8 @@
       "type": "Feature",
       "id": "COG",
       "properties": {
-        "name": "Republic of the Congo"
+        "name": "Republic of the Congo",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -4201,7 +4237,8 @@
       "type": "Feature",
       "id": "COL",
       "properties": {
-        "name": "Colombia"
+        "name": "Colombia",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -4315,7 +4352,8 @@
       "type": "Feature",
       "id": "CRI",
       "properties": {
-        "name": "Costa Rica"
+        "name": "Costa Rica",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -4365,7 +4403,8 @@
       "type": "Feature",
       "id": "CUB",
       "properties": {
-        "name": "Cuba"
+        "name": "Cuba",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -4421,7 +4460,8 @@
       "type": "Feature",
       "id": "-99",
       "properties": {
-        "name": "Northern Cyprus"
+        "name": "Northern Cyprus",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -4451,7 +4491,8 @@
       "type": "Feature",
       "id": "CYP",
       "properties": {
-        "name": "Cyprus"
+        "name": "Cyprus",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -4480,7 +4521,8 @@
       "type": "Feature",
       "id": "CZE",
       "properties": {
-        "name": "Czech Republic"
+        "name": "Czech Republic",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -4529,7 +4571,8 @@
       "type": "Feature",
       "id": "DEU",
       "properties": {
-        "name": "Germany"
+        "name": "Germany",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -4601,7 +4644,8 @@
       "type": "Feature",
       "id": "DJI",
       "properties": {
-        "name": "Djibouti"
+        "name": "Djibouti",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -4630,7 +4674,8 @@
       "type": "Feature",
       "id": "DNK",
       "properties": {
-        "name": "Denmark"
+        "name": "Denmark",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -4674,7 +4719,8 @@
       "type": "Feature",
       "id": "DOM",
       "properties": {
-        "name": "Dominican Republic"
+        "name": "Dominican Republic",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -4714,7 +4760,8 @@
       "type": "Feature",
       "id": "DZA",
       "properties": {
-        "name": "Algeria"
+        "name": "Algeria",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -4790,7 +4837,8 @@
       "type": "Feature",
       "id": "ECU",
       "properties": {
-        "name": "Ecuador"
+        "name": "Ecuador",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -4837,7 +4885,8 @@
       "type": "Feature",
       "id": "EGY",
       "properties": {
-        "name": "Egypt"
+        "name": "Egypt",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -4893,7 +4942,8 @@
       "type": "Feature",
       "id": "ERI",
       "properties": {
-        "name": "Eritrea"
+        "name": "Eritrea",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -4935,7 +4985,8 @@
       "type": "Feature",
       "id": "ESP",
       "properties": {
-        "name": "Spain"
+        "name": "Spain",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -5000,7 +5051,8 @@
       "type": "Feature",
       "id": "EST",
       "properties": {
-        "name": "Estonia"
+        "name": "Estonia",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -5031,7 +5083,8 @@
       "type": "Feature",
       "id": "ETH",
       "properties": {
-        "name": "Ethiopia"
+        "name": "Ethiopia",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -5104,7 +5157,8 @@
       "type": "Feature",
       "id": "FIN",
       "properties": {
-        "name": "Finland"
+        "name": "Finland",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -5156,7 +5210,8 @@
       "type": "Feature",
       "id": "FJI",
       "properties": {
-        "name": "Fiji"
+        "name": "Fiji",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -5202,7 +5257,8 @@
       "type": "Feature",
       "id": "FLK",
       "properties": {
-        "name": "Falkland Islands"
+        "name": "Falkland Islands",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -5226,7 +5282,8 @@
       "type": "Feature",
       "id": "FRA",
       "properties": {
-        "name": "France"
+        "name": "France",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -5301,7 +5358,8 @@
       "type": "Feature",
       "id": "GAB",
       "properties": {
-        "name": "Gabon"
+        "name": "Gabon",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -5346,7 +5404,8 @@
       "type": "Feature",
       "id": "GBR",
       "properties": {
-        "name": "United Kingdom"
+        "name": "United Kingdom",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -5422,7 +5481,8 @@
       "type": "Feature",
       "id": "GEO",
       "properties": {
-        "name": "Georgia"
+        "name": "Georgia",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -5460,7 +5520,8 @@
       "type": "Feature",
       "id": "GHA",
       "properties": {
-        "name": "Ghana"
+        "name": "Ghana",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -5499,7 +5560,8 @@
       "type": "Feature",
       "id": "GIN",
       "properties": {
-        "name": "Guinea"
+        "name": "Guinea",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -5583,7 +5645,8 @@
       "type": "Feature",
       "id": "GMB",
       "properties": {
-        "name": "Gambia"
+        "name": "Gambia",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -5613,7 +5676,8 @@
       "type": "Feature",
       "id": "GNB",
       "properties": {
-        "name": "Guinea Bissau"
+        "name": "Guinea Bissau",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -5646,7 +5710,8 @@
       "type": "Feature",
       "id": "GNQ",
       "properties": {
-        "name": "Equatorial Guinea"
+        "name": "Equatorial Guinea",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -5667,7 +5732,8 @@
       "type": "Feature",
       "id": "GRC",
       "properties": {
-        "name": "Greece"
+        "name": "Greece",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -5741,7 +5807,8 @@
       "type": "Feature",
       "id": "GRL",
       "properties": {
-        "name": "Greenland"
+        "name": "Greenland",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -5887,7 +5954,8 @@
       "type": "Feature",
       "id": "GTM",
       "properties": {
-        "name": "Guatemala"
+        "name": "Guatemala",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -5936,7 +6004,8 @@
       "type": "Feature",
       "id": "GUF",
       "properties": {
-        "name": "French Guiana"
+        "name": "French Guiana",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -5969,7 +6038,8 @@
       "type": "Feature",
       "id": "GUY",
       "properties": {
-        "name": "Guyana"
+        "name": "Guyana",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -6023,7 +6093,8 @@
       "type": "Feature",
       "id": "HND",
       "properties": {
-        "name": "Honduras"
+        "name": "Honduras",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -6094,7 +6165,8 @@
       "type": "Feature",
       "id": "HRV",
       "properties": {
-        "name": "Croatia"
+        "name": "Croatia",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -6150,7 +6222,8 @@
       "type": "Feature",
       "id": "HTI",
       "properties": {
-        "name": "Haiti"
+        "name": "Haiti",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -6185,7 +6258,8 @@
       "type": "Feature",
       "id": "HUN",
       "properties": {
-        "name": "Hungary"
+        "name": "Hungary",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -6230,7 +6304,8 @@
       "type": "Feature",
       "id": "IDN",
       "properties": {
-        "name": "Indonesia"
+        "name": "Indonesia",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -6544,7 +6619,8 @@
       "type": "Feature",
       "id": "IND",
       "properties": {
-        "name": "India"
+        "name": "India",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -6694,7 +6770,8 @@
       "type": "Feature",
       "id": "IRL",
       "properties": {
-        "name": "Ireland"
+        "name": "Ireland",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -6721,7 +6798,8 @@
       "type": "Feature",
       "id": "IRN",
       "properties": {
-        "name": "Iran"
+        "name": "Iran",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -6810,7 +6888,8 @@
       "type": "Feature",
       "id": "IRQ",
       "properties": {
-        "name": "Iraq"
+        "name": "Iraq",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -6854,7 +6933,8 @@
       "type": "Feature",
       "id": "ISL",
       "properties": {
-        "name": "Iceland"
+        "name": "Iceland",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -6888,7 +6968,8 @@
       "type": "Feature",
       "id": "ISR",
       "properties": {
-        "name": "Israel"
+        "name": "Israel",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -6925,7 +7006,8 @@
       "type": "Feature",
       "id": "ITA",
       "properties": {
-        "name": "Italy"
+        "name": "Italy",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -7036,7 +7118,8 @@
       "type": "Feature",
       "id": "JAM",
       "properties": {
-        "name": "Jamaica"
+        "name": "Jamaica",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -7061,7 +7144,8 @@
       "type": "Feature",
       "id": "JOR",
       "properties": {
-        "name": "Jordan"
+        "name": "Jordan",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -7094,7 +7178,8 @@
       "type": "Feature",
       "id": "JPN",
       "properties": {
-        "name": "Japan"
+        "name": "Japan",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -7183,7 +7268,8 @@
       "type": "Feature",
       "id": "KAZ",
       "properties": {
-        "name": "Kazakhstan"
+        "name": "Kazakhstan",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -7309,7 +7395,8 @@
       "type": "Feature",
       "id": "KEN",
       "properties": {
-        "name": "Kenya"
+        "name": "Kenya",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -7360,7 +7447,8 @@
       "type": "Feature",
       "id": "KGZ",
       "properties": {
-        "name": "Kyrgyzstan"
+        "name": "Kyrgyzstan",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -7409,7 +7497,8 @@
       "type": "Feature",
       "id": "KHM",
       "properties": {
-        "name": "Cambodia"
+        "name": "Cambodia",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -7440,7 +7529,8 @@
       "type": "Feature",
       "id": "KOR",
       "properties": {
-        "name": "South Korea"
+        "name": "South Korea",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -7473,7 +7563,8 @@
       "type": "Feature",
       "id": "CS-KM",
       "properties": {
-        "name": "Kosovo"
+        "name": "Kosovo",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -7508,7 +7599,8 @@
       "type": "Feature",
       "id": "KWT",
       "properties": {
-        "name": "Kuwait"
+        "name": "Kuwait",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -7531,7 +7623,8 @@
       "type": "Feature",
       "id": "LAO",
       "properties": {
-        "name": "Laos"
+        "name": "Laos",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -7582,7 +7675,8 @@
       "type": "Feature",
       "id": "LBN",
       "properties": {
-        "name": "Lebanon"
+        "name": "Lebanon",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -7607,7 +7701,8 @@
       "type": "Feature",
       "id": "LBR",
       "properties": {
-        "name": "Liberia"
+        "name": "Liberia",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -7648,7 +7743,8 @@
       "type": "Feature",
       "id": "LBY",
       "properties": {
-        "name": "Libya"
+        "name": "Libya",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -7718,7 +7814,8 @@
       "type": "Feature",
       "id": "LKA",
       "properties": {
-        "name": "Sri Lanka"
+        "name": "Sri Lanka",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -7742,7 +7839,8 @@
       "type": "Feature",
       "id": "LSO",
       "properties": {
-        "name": "Lesotho"
+        "name": "Lesotho",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -7768,7 +7866,8 @@
       "type": "Feature",
       "id": "LTU",
       "properties": {
-        "name": "Lithuania"
+        "name": "Lithuania",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -7801,7 +7900,8 @@
       "type": "Feature",
       "id": "LUX",
       "properties": {
-        "name": "Luxembourg"
+        "name": "Luxembourg",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -7822,7 +7922,8 @@
       "type": "Feature",
       "id": "LVA",
       "properties": {
-        "name": "Latvia"
+        "name": "Latvia",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -7858,7 +7959,8 @@
       "type": "Feature",
       "id": "MAR",
       "properties": {
-        "name": "Morocco"
+        "name": "Morocco",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -7936,7 +8038,8 @@
       "type": "Feature",
       "id": "MDA",
       "properties": {
-        "name": "Moldova"
+        "name": "Moldova",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -7977,7 +8080,8 @@
       "type": "Feature",
       "id": "MDG",
       "properties": {
-        "name": "Madagascar"
+        "name": "Madagascar",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -8040,7 +8144,8 @@
       "type": "Feature",
       "id": "MEX",
       "properties": {
-        "name": "Mexico"
+        "name": "Mexico",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -8224,7 +8329,8 @@
       "type": "Feature",
       "id": "MKD",
       "properties": {
-        "name": "Macedonia"
+        "name": "Macedonia",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -8255,7 +8361,8 @@
       "type": "Feature",
       "id": "MLI",
       "properties": {
-        "name": "Mali"
+        "name": "Mali",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -8345,7 +8452,8 @@
       "type": "Feature",
       "id": "MLT",
       "properties": {
-        "name": "Malta"
+        "name": "Malta",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -8381,7 +8489,8 @@
       "type": "Feature",
       "id": "MMR",
       "properties": {
-        "name": "Myanmar"
+        "name": "Myanmar",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -8465,7 +8574,8 @@
       "type": "Feature",
       "id": "MNE",
       "properties": {
-        "name": "Montenegro"
+        "name": "Montenegro",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -8497,7 +8607,8 @@
       "type": "Feature",
       "id": "MNG",
       "properties": {
-        "name": "Mongolia"
+        "name": "Mongolia",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -8586,7 +8697,8 @@
       "type": "Feature",
       "id": "MOZ",
       "properties": {
-        "name": "Mozambique"
+        "name": "Mozambique",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -8677,7 +8789,8 @@
       "type": "Feature",
       "id": "MRT",
       "properties": {
-        "name": "Mauritania"
+        "name": "Mauritania",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -8730,7 +8843,8 @@
       "type": "Feature",
       "id": "MWI",
       "properties": {
-        "name": "Malawi"
+        "name": "Malawi",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -8772,7 +8886,8 @@
       "type": "Feature",
       "id": "MYS",
       "properties": {
-        "name": "Malaysia"
+        "name": "Malaysia",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -8854,7 +8969,8 @@
       "type": "Feature",
       "id": "NAM",
       "properties": {
-        "name": "Namibia"
+        "name": "Namibia",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -8912,7 +9028,8 @@
       "type": "Feature",
       "id": "NCL",
       "properties": {
-        "name": "New Caledonia"
+        "name": "New Caledonia",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -8939,7 +9056,8 @@
       "type": "Feature",
       "id": "NER",
       "properties": {
-        "name": "Niger"
+        "name": "Niger",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -9011,7 +9129,8 @@
       "type": "Feature",
       "id": "NGA",
       "properties": {
-        "name": "Nigeria"
+        "name": "Nigeria",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -9083,7 +9202,8 @@
       "type": "Feature",
       "id": "NIC",
       "properties": {
-        "name": "Nicaragua"
+        "name": "Nicaragua",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -9149,7 +9269,8 @@
       "type": "Feature",
       "id": "NLD",
       "properties": {
-        "name": "Netherlands"
+        "name": "Netherlands",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -9177,7 +9298,8 @@
       "type": "Feature",
       "id": "NOR",
       "properties": {
-        "name": "Norway"
+        "name": "Norway",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -9293,7 +9415,8 @@
       "type": "Feature",
       "id": "NPL",
       "properties": {
-        "name": "Nepal"
+        "name": "Nepal",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -9330,7 +9453,8 @@
       "type": "Feature",
       "id": "NZL",
       "properties": {
-        "name": "New Zealand"
+        "name": "New Zealand",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -9416,7 +9540,8 @@
       "type": "Feature",
       "id": "OMN",
       "properties": {
-        "name": "Oman"
+        "name": "Oman",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -9483,7 +9608,8 @@
       "type": "Feature",
       "id": "PAK",
       "properties": {
-        "name": "Pakistan"
+        "name": "Pakistan",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -9563,7 +9689,8 @@
       "type": "Feature",
       "id": "PAN",
       "properties": {
-        "name": "Panama"
+        "name": "Panama",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -9629,7 +9756,8 @@
       "type": "Feature",
       "id": "PER",
       "properties": {
-        "name": "Peru"
+        "name": "Peru",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -9719,7 +9847,8 @@
       "type": "Feature",
       "id": "PHL",
       "properties": {
-        "name": "Philippines"
+        "name": "Philippines",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -9869,7 +9998,8 @@
       "type": "Feature",
       "id": "PNG",
       "properties": {
-        "name": "Papua New Guinea"
+        "name": "Papua New Guinea",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -9978,7 +10108,8 @@
       "type": "Feature",
       "id": "POL",
       "properties": {
-        "name": "Poland"
+        "name": "Poland",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -10037,7 +10168,8 @@
       "type": "Feature",
       "id": "PRI",
       "properties": {
-        "name": "Puerto Rico"
+        "name": "Puerto Rico",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -10060,7 +10192,8 @@
       "type": "Feature",
       "id": "PRK",
       "properties": {
-        "name": "North Korea"
+        "name": "North Korea",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -10117,7 +10250,8 @@
       "type": "Feature",
       "id": "PRT",
       "properties": {
-        "name": "Portugal"
+        "name": "Portugal",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -10164,7 +10298,8 @@
       "type": "Feature",
       "id": "PRY",
       "properties": {
-        "name": "Paraguay"
+        "name": "Paraguay",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -10211,7 +10346,8 @@
       "type": "Feature",
       "id": "QAT",
       "properties": {
-        "name": "Qatar"
+        "name": "Qatar",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -10234,7 +10370,8 @@
       "type": "Feature",
       "id": "ROU",
       "properties": {
-        "name": "Romania"
+        "name": "Romania",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -10292,7 +10429,8 @@
       "type": "Feature",
       "id": "RUS",
       "properties": {
-        "name": "Russia"
+        "name": "Russia",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -10954,7 +11092,8 @@
       "type": "Feature",
       "id": "RWA",
       "properties": {
-        "name": "Rwanda"
+        "name": "Rwanda",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -10981,7 +11120,8 @@
       "type": "Feature",
       "id": "ESH",
       "properties": {
-        "name": "Western Sahara"
+        "name": "Western Sahara",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -11023,7 +11163,8 @@
       "type": "Feature",
       "id": "SAU",
       "properties": {
-        "name": "Saudi Arabia"
+        "name": "Saudi Arabia",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -11113,7 +11254,8 @@
       "type": "Feature",
       "id": "SDN",
       "properties": {
-        "name": "Sudan"
+        "name": "Sudan",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -11206,7 +11348,8 @@
       "type": "Feature",
       "id": "SSD",
       "properties": {
-        "name": "South Sudan"
+        "name": "South Sudan",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -11283,7 +11426,8 @@
       "type": "Feature",
       "id": "SEN",
       "properties": {
-        "name": "Senegal"
+        "name": "Senegal",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -11341,7 +11485,8 @@
       "type": "Feature",
       "id": "SLB",
       "properties": {
-        "name": "Solomon Islands"
+        "name": "Solomon Islands",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -11410,7 +11555,8 @@
       "type": "Feature",
       "id": "SLE",
       "properties": {
-        "name": "Sierra Leone"
+        "name": "Sierra Leone",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -11446,7 +11592,8 @@
       "type": "Feature",
       "id": "SLV",
       "properties": {
-        "name": "El Salvador"
+        "name": "El Salvador",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -11480,7 +11627,8 @@
       "type": "Feature",
       "id": "-99",
       "properties": {
-        "name": "Somaliland"
+        "name": "Somaliland",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -11518,7 +11666,8 @@
       "type": "Feature",
       "id": "SOM",
       "properties": {
-        "name": "Somalia"
+        "name": "Somalia",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -11568,7 +11717,8 @@
       "type": "Feature",
       "id": "SRB",
       "properties": {
-        "name": "Republic of Serbia"
+        "name": "Republic of Serbia",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -11628,7 +11778,8 @@
       "type": "Feature",
       "id": "SUR",
       "properties": {
-        "name": "Suriname"
+        "name": "Suriname",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -11668,7 +11819,8 @@
       "type": "Feature",
       "id": "SVK",
       "properties": {
-        "name": "Slovakia"
+        "name": "Slovakia",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -11715,7 +11867,8 @@
       "type": "Feature",
       "id": "SVN",
       "properties": {
-        "name": "Slovenia"
+        "name": "Slovenia",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -11747,7 +11900,8 @@
       "type": "Feature",
       "id": "SWE",
       "properties": {
-        "name": "Sweden"
+        "name": "Sweden",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -11847,7 +12001,8 @@
       "type": "Feature",
       "id": "SWZ",
       "properties": {
-        "name": "Swaziland"
+        "name": "Swaziland",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -11872,7 +12027,8 @@
       "type": "Feature",
       "id": "SYR",
       "properties": {
-        "name": "Syria"
+        "name": "Syria",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -11913,7 +12069,8 @@
       "type": "Feature",
       "id": "TCD",
       "properties": {
-        "name": "Chad"
+        "name": "Chad",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -11985,7 +12142,8 @@
       "type": "Feature",
       "id": "TGO",
       "properties": {
-        "name": "Togo"
+        "name": "Togo",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -12018,7 +12176,8 @@
       "type": "Feature",
       "id": "THA",
       "properties": {
-        "name": "Thailand"
+        "name": "Thailand",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -12096,7 +12255,8 @@
       "type": "Feature",
       "id": "TJK",
       "properties": {
-        "name": "Tajikistan"
+        "name": "Tajikistan",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -12151,7 +12311,8 @@
       "type": "Feature",
       "id": "TKM",
       "properties": {
-        "name": "Turkmenistan"
+        "name": "Turkmenistan",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -12219,7 +12380,8 @@
       "type": "Feature",
       "id": "TLS",
       "properties": {
-        "name": "East Timor"
+        "name": "East Timor",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -12244,7 +12406,8 @@
       "type": "Feature",
       "id": "TTO",
       "properties": {
-        "name": "Trinidad and Tobago"
+        "name": "Trinidad and Tobago",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -12266,7 +12429,8 @@
       "type": "Feature",
       "id": "TUN",
       "properties": {
-        "name": "Tunisia"
+        "name": "Tunisia",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -12311,7 +12475,8 @@
       "type": "Feature",
       "id": "TUR",
       "properties": {
-        "name": "Turkey"
+        "name": "Turkey",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -12398,7 +12563,8 @@
       "type": "Feature",
       "id": "TWN",
       "properties": {
-        "name": "Taiwan"
+        "name": "Taiwan",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -12421,7 +12587,8 @@
       "type": "Feature",
       "id": "TZA",
       "properties": {
-        "name": "United Republic of Tanzania"
+        "name": "United Republic of Tanzania",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -12484,7 +12651,8 @@
       "type": "Feature",
       "id": "UGA",
       "properties": {
-        "name": "Uganda"
+        "name": "Uganda",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -12525,7 +12693,8 @@
       "type": "Feature",
       "id": "UKR",
       "properties": {
-        "name": "Ukraine"
+        "name": "Ukraine",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -12637,7 +12806,8 @@
       "type": "Feature",
       "id": "URY",
       "properties": {
-        "name": "Uruguay"
+        "name": "Uruguay",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -12672,7 +12842,8 @@
       "type": "Feature",
       "id": "USA",
       "properties": {
-        "name": "United States of America"
+        "name": "United States of America",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -13167,7 +13338,8 @@
       "type": "Feature",
       "id": "UZB",
       "properties": {
-        "name": "Uzbekistan"
+        "name": "Uzbekistan",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -13235,7 +13407,8 @@
       "type": "Feature",
       "id": "VEN",
       "properties": {
-        "name": "Venezuela"
+        "name": "Venezuela",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -13341,7 +13514,8 @@
       "type": "Feature",
       "id": "VNM",
       "properties": {
-        "name": "Vietnam"
+        "name": "Vietnam",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -13399,7 +13573,8 @@
       "type": "Feature",
       "id": "VUT",
       "properties": {
-        "name": "Vanuatu"
+        "name": "Vanuatu",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -13431,7 +13606,8 @@
       "type": "Feature",
       "id": "PSE",
       "properties": {
-        "name": "West Bank"
+        "name": "West Bank",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -13454,7 +13630,8 @@
       "type": "Feature",
       "id": "YEM",
       "properties": {
-        "name": "Yemen"
+        "name": "Yemen",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -13512,7 +13689,8 @@
       "type": "Feature",
       "id": "ZAF",
       "properties": {
-        "name": "South Africa"
+        "name": "South Africa",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -13622,7 +13800,8 @@
       "type": "Feature",
       "id": "ZMB",
       "properties": {
-        "name": "Zambia"
+        "name": "Zambia",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",
@@ -13697,7 +13876,8 @@
       "type": "Feature",
       "id": "ZWE",
       "properties": {
-        "name": "Zimbabwe"
+        "name": "Zimbabwe",
+        "start_date": "1945-01-01"
       },
       "geometry": {
         "type": "Polygon",

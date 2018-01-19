@@ -17,3 +17,10 @@ class StateViewSet(ReadOnlyModelViewSet):
 class ShapeViewSet(ReadOnlyModelViewSet):
     serializer_class = ShapeSerializer
     queryset = Shape.objects.all()
+
+    def get_queryset(self):
+        queryset = Shape.objects.all()
+        date = self.request.query_params.get('date', None)
+        if date is not None:
+            queryset = queryset.filter(start_date__lte=date, end_date__gte=date)
+        return queryset

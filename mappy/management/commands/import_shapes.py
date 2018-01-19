@@ -17,17 +17,16 @@ class Command(BaseCommand):
         ds = gdal.DataSource(file_names[0])
         layer = ds[0]
         # assert(all(field in layer.fields for field in ['state', 'source', 'start_date', 'end_date']))
-        for feature in layer[:2]:
+        for feature in layer:
             state = feature.get('name')
             geom = feature.geom.geos
-            source = feature.get('source', file_names[0])
-            start_date = feature.get('start_date', date(1945, 1, 1))
+            source = 'https://github.com/johan/world.geo.json'
+            start_date = feature.get('start_date') or date(1945, 1, 1)
             if type(geom) == geos.Polygon:
                 geom = geos.MultiPolygon(geom)
-            qs = State.objects.filter(name=state)
-            if qs.count() == 0:
-                state = State.objects.create(name=state, color="test")
-            elif qs.count() == 1:
-                state = qs[0]
-            print(state, type(geom))
-            Shape.objects.create(state=state, shape=geom, source=source, start_date=start_date, end_date=date(2018, 1, 1))
+            state, created = State.objects.get_or_create(name=state, color="test")
+            print(state, start_date, created)
+            Shape.objects.get_or_create(state=state, shape=geom, source=source, start_date=start_date, end_date=date(2018, 1, 1))
+
+        print(State.objects.count())
+        print(Shape.objects.count())
