@@ -17,7 +17,7 @@ class State(Model):
     # to live on as the Byzantine? Am I overthinking this?
     # TODO: On the other end of the spectrum, should we make 'name' the primary key? This could be
     # our desired unique identifier if they are all unique
-    name = TextField(help_text='Canonical name -- each state should have only one.')
+    name = TextField(help_text='Canonical name -- each state should have only one.', unique=True)
     aliases = TextField(help_text='CSV of alternative names this state may be known by.', blank=True)
     # TODO: Do we need an internal unique country_id for every State? (IMO no)
     # Requiring it would be laborious and cumbersome (we need a consistent hashing schema, and conflict
@@ -75,9 +75,7 @@ class Shape(Model):  # Should this just be called Border?
         If date is None, it should return all shapes thar border it throughout its existence.
         I imagine this will require a custom PostGIS query. Or maybe just the __touches GeoDjango query.
         """
-        pass
-        shapes_at_date = Shape.objects.filter(start_date__lte=date, end_date__gte=date)
-        # shape__touches=self.shape
+        Shape.objects.filter(start_date__lte=date, end_date__gte=date, shape__touches=self.shape) if date else Shape.objects.filter(shape__touches=self.shape)
 
     def clean(self):
         """

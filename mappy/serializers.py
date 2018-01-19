@@ -12,4 +12,4 @@ class StateSerializer(ModelSerializer):
 class ShapeSerializer(ModelSerializer):
     class Meta:
         model = Shape
-        fields = ('state', 'source', 'start_date', 'start_event', 'end_date', 'end_event')
+        fields = ('state', 'shape', 'source', 'start_date', 'start_event', 'end_date', 'end_event')
