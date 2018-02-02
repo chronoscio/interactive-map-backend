@@ -1,7 +1,7 @@
 # from django.contrib import admin
 from django.contrib.gis import admin
 from .models import State, Event, Shape
-
+from .forms import ShapeForm
 
 @admin.register(State)
 class StateAdmin(admin.ModelAdmin):
@@ -13,4 +13,7 @@ class EventAdmin(admin.ModelAdmin):
 
 @admin.register(Shape)
 class ShapeAdmin(admin.OSMGeoAdmin):
-    pass
+
+    form = ShapeForm
+
+    fields = ('state', 'start_date', 'end_date', 'shape_file', 'shape', 'source', 'start_event', 'end_event')
