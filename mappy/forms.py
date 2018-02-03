@@ -5,6 +5,7 @@ from zipfile import ZipFile
 from tempfile import mkdtemp
 from django.contrib.gis import geos, gdal
 import glob
+import shutil
 
 
 
@@ -12,46 +13,58 @@ import glob
 
 class ShapeForm(forms.ModelForm):
 
-    shape_file = forms.FileField()
+    shape_file = forms.FileField(required=False)
     def __init__(self, *args, **kwargs):
 
         shape_file = forms.FileField()
         return super(ShapeForm, self).__init__(*args, **kwargs)
 
+    def clean(self):
+        form_data = self.cleaned_data
+        if form_data['shape_file'] == None and form_data['shape'] == None :
+            raise forms.ValidationError("You need to have a value in either shape file or shape ") # Will raise a error message
+        return form_data
+
 
     def save(self, commit=True):
         modal = super(ShapeForm, self).save(commit=False)
-        if 'shape_file' in self.cleaned_data:
+        print(self.cleaned_data['shape_file'])
+        if not self.cleaned_data['shape_file'] == None:
             shape_file = self.cleaned_data['shape_file']
-        working_dir = mkdtemp()
-        shape_zip = ZipFile(shape_file)
-        shape_zip.extractall(working_dir)
+            working_dir = mkdtemp()
+            try:
+                shape_zip = ZipFile(shape_file)
+                shape_zip.extractall(working_dir)
+            except:
+                shutil.rmtree(working_dir)
+                print("Could not extract zip file.")
 
-        shapes_list = glob.glob(working_dir + '/*.shp')
-        if(len(shapes_list) != 1):
-            #error here about having more then one shpaefile on the zip.
-            pass
-        else:
-            ds = gdal.DataSource(shapes_list[0])
-            layer = ds[0]
-            polygons = []
-            for feature in layer:
-                state = self.cleaned_data['state']
-                geom = feature.geom.geos
-                source = self.cleaned_data['source']
-                start_date = self.cleaned_data['start_date'] or date(1945, 1, 1)
-                end_date = self.cleaned_data['end_date'] or date(2018, 1, 1)
+            shapes_list = glob.glob(working_dir + '/*.shp')
 
-                if type(geom) == geos.Polygon:
-                    polygons.append(geom)
+            try:
+                ds = gdal.DataSource(shapes_list[0])
+                layer = ds[0]
+                polygons = []
+                for feature in layer:
+                    state = self.cleaned_data['state']
+                    geom = feature.geom.geos
+                    source = self.cleaned_data['source']
+                    start_date = self.cleaned_data['start_date'] or date(1945, 1, 1)
+                    end_date = self.cleaned_data['end_date'] or date(2018, 1, 1)
 
-            if len(polygons) > 0:
-                multipoly = geos.MultiPolygon(polygons)
-                modal, created = Shape.objects.get_or_create(state=state, shape=multipoly, source=source, start_date=start_date, end_date=end_date)
+                    if type(geom) == geos.Polygon:
+                        polygons.append(geom)
 
-            if commit == True:
-                m.save()
+                if len(polygons) > 0:
+                    multipoly = geos.MultiPolygon(polygons)
+                    modal, created = Shape.objects.get_or_create(state=state, shape=multipoly, source=source, start_date=start_date, end_date=end_date)
 
+            except:
+                shutil.rmtree(working_dir)
+                print("Error when converting shape file.")
+
+        if commit == True:
+            m.save()
         return modal
 
     class Meta:
