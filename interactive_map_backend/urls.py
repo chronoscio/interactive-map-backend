@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import include, path
 from rest_framework.routers import DefaultRouter
 
-from mappy.views import StateViewSet, ShapeViewSet
+from mappy.views import StateViewSet, ShapeViewSet, signup
 
 router = DefaultRouter(trailing_slash=False)
 router.register('states', StateViewSet)
@@ -25,5 +25,6 @@ router.register('shapes', ShapeViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include(router.urls))
+    path('api/', include(router.urls)),
+    path('admin/signup/', signup, name='signup')
 ]

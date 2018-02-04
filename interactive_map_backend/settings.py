@@ -57,7 +57,7 @@ ROOT_URLCONF = 'interactive_map_backend.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'mappy/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %} Pain Inducingly Prototype Signup Page{% endblock %}</title>
+  <style>
+    body {
+      background-color: #eee;
+    }
+
+    #container {
+      background: white;
+      border: 1px solid #ccc;
+      width: 28em;
+      min-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 100px;
+    }
+
+    #content-main {
+      width: 100%;
+    }
+
+    form {
+      margin-top: 1em;
+    }
+
+    .form {
+      padding: 4px 0;
+      float: left;
+      width: 100%;
+    }
+
+    .form label {
+      padding-right: 0.5em;
+      line-height: 2em;
+      font-size: 1em;
+      clear: both;
+      color: #333;
+    }
+
+    .form input {
+      clear: both;
+      padding: 6px;
+      width: 100%;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+
+
+    .submit-row {
+      clear: both;
+      padding: 1em 0 0 9.4em;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <main>
+      {% block content %} {% endblock %}
+    </main>
+  </div>
+</body>
+
+</html>

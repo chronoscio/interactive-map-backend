@@ -1,9 +1,11 @@
 from django import forms
+from django.contrib.auth.models import User,Group
 from django.db import models
 from .models import State, Shape, Event
 from zipfile import ZipFile
 from tempfile import mkdtemp
 from django.contrib.gis import geos, gdal
+from django.contrib.auth.forms import UserCreationForm
 import glob
 import shutil
 
@@ -70,3 +72,29 @@ class ShapeForm(forms.ModelForm):
     class Meta:
         model = Shape
         exclude = [ ]
+
+
+
+class SignUpForm(UserCreationForm):
+    first_name = forms.CharField(max_length=30, required=False, help_text='Optional.')
+    last_name = forms.CharField(max_length=30, required=False, help_text='Optional.')
+    email = forms.EmailField(max_length=254, help_text='Required. Inform a valid email address.')
+
+
+    def save(self, commit=True):
+        user = super(SignUpForm, self).save(commit=False)
+        user.is_staff = True
+        if commit:
+            user.save()
+            try:
+                g = Group.objects.get(name='mapper')
+            except Group.DoesNotExist:
+                pass
+            else:
+                user.groups.add(g)
+
+
+
+    class Meta:
+        model = User
+        fields = ('username', 'first_name', 'last_name', 'email', 'password1', 'password2', )
