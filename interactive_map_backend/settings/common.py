@@ -133,3 +133,14 @@ os.environ.setdefault("DB_DEFAULT_PORT", "5432")
 os.environ.setdefault("DB_DEFAULT_NAME", "interactivemap")
 os.environ.setdefault("DB_DEFAULT_USER", "")
 os.environ.setdefault("DB_DEFAULT_PASSWORD", "")
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': os.environ['DB_DEFAULT_NAME'],
+        'USER': os.environ['DB_DEFAULT_USER'],
+        'PASSWORD': os.environ['DB_DEFAULT_PASSWORD'],
+        'HOST': os.environ['DB_DEFAULT_HOST'],
+        'PORT': os.environ['DB_DEFAULT_PORT'],
+    }
+}

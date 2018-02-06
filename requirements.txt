@@ -19,3 +19,4 @@ django-cors-headers=2.1.0
 django-reversion=2.0.13
 django-reversion-compare=0.8.3
 gdal==2.2.3
+uwsgi==2.0.15

@@ -46,4 +46,5 @@ ENV UWSGI_VIRTUALENV=/venv UWSGI_WSGI_FILE=interactive_map_backend/wsgi.py UWSGI
 RUN DB_URL=none /venv/bin/python manage.py collectstatic --noinput
 
 # Start uWSGI
-CMD ["/venv/bin/uwsgi", "--http-auto-chunked", "--http-keepalive"]
+CMD ["/bin/ash", "./bin/wait_for_postgres.sh", "/venv/bin/uwsgi", "--http-auto-chunked", "--http-keepalive"]
+# CMD ["/venv/bin/python", "manage.py", "runserver"]

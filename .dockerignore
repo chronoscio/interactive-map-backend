@@ -1,7 +1,6 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
+docker-compose.yaml
+
+.data/
 
 # C extensions
 *.so
@@ -84,6 +83,7 @@ celerybeat-schedule
 
 # Environments
 .env
+*.env
 .prod
 .venv
 env/
