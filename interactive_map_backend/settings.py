@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.gis',
     'rest_framework',
     'mappy.apps.MappyConfig',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -47,6 +48,7 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -73,6 +75,11 @@ TEMPLATES = [
 WSGI_APPLICATION = 'interactive_map_backend.wsgi.application'
 
 
+CORS_ORIGIN_WHITELIST = (
+    'localhost:3000',
+
+)
+
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
@@ -86,6 +93,12 @@ DATABASES = {
         'HOST': 'localhost',
         'PORT': '',
     }
+}
+
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': (
+        'rest_framework.renderers.JSONRenderer',
+    )
 }
 
 
