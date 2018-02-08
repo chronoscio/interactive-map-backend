@@ -2,17 +2,20 @@
 from django.contrib.gis import admin
 from .models import State, Event, Shape
 from .forms import ShapeForm
+from reversion.admin import VersionAdmin
+from reversion_compare.admin import CompareVersionAdmin
 
 @admin.register(State)
-class StateAdmin(admin.ModelAdmin):
+class StateAdmin(CompareVersionAdmin, admin.ModelAdmin):
     pass
 
 @admin.register(Event)
-class EventAdmin(admin.ModelAdmin):
+class EventAdmin(CompareVersionAdmin, admin.ModelAdmin):
     pass
 
+
 @admin.register(Shape)
-class ShapeAdmin(admin.OSMGeoAdmin):
+class ShapeAdmin(CompareVersionAdmin, admin.OSMGeoAdmin):
 
     form = ShapeForm
 

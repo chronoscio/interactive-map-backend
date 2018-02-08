@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'mappy.apps.MappyConfig',
     'corsheaders',
+    'reversion',
+    'reversion_compare',
 ]
 
 MIDDLEWARE = [
@@ -133,6 +135,8 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+ADD_REVERSION_ADMIN=True
 
 
 # Static files (CSS, JavaScript, Images)
