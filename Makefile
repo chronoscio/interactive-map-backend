@@ -1,6 +1,8 @@
 DOCKER=docker
 COMPOSE=docker-compose
 APP_NAME="interactivemap"
+STATIC_APP_NAME="imap_static"
+DB_SERVER="imap_pg"
 
 # import config.
 # You can change the default config with `make cnf="config_special.env" build`
@@ -32,13 +34,14 @@ help: ## This help.
 # DOCKER TASKS
 
 # Build the container
-build: ## Build the release and develoment container. The development
-	$(COMPOSE) build --no-cache $(APP_NAME)
-	$(COMPOSE) run $(APP_NAME) grunt build
+
+image_app:
 	$(DOCKER) build -t $(APP_NAME) .
 
-image:
-	$(DOCKER) build -t $(APP_NAME) .
+image_static:
+	$(DOCKER) build -t $(STATIC_APP_NAME) staticserver
+
+image: image_app image_static
 
 run: stop ## Run container on port configured in `config.env`
 	$(DOCKER) run -i -t --rm --env-file=./config.env -p=$(PORT):$(PORT) --name="$(APP_NAME)" $(APP_NAME)
@@ -55,7 +58,9 @@ app: ## Spin up the project
 	$(COMPOSE) up --build $(APP_NAME)
 
 stop: ## Stop running containers
+	$(DOCKER) stop $(STATIC_APP_NAME)
 	$(DOCKER) stop $(APP_NAME)
+	$(DOCKER) stop $(DB_SERVER)
 
 rm: stop ## Stop and remove running containers
 	$(DOCKER) rm $(APP_NAME)
