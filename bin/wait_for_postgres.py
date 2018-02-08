@@ -1,15 +1,17 @@
-import socket
 import time
 import sys
+import psycopg2
 
-host = sys.argv[1]
-port = int(sys.argv[2])
+dbname = sys.argv[1]
+host = sys.argv[2]
+port = int(sys.argv[3])
+user = sys.argv[4]
+password = sys.argv[5]
 
-s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 while True:
     try:
-        s.connect((host, port))
-        s.close()
+        conn = psycopg2.connect(host=host, port=port, dbname=dbname, user=user, password=password)
+        conn.close()
         break
-    except socket.error as ex:
-        time.sleep(0.1)
+    except:
+        time.sleep(1)
