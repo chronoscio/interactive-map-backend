@@ -26,5 +26,5 @@ router.register('shapes', ShapeViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
-    path('admin/signup/', signup, name='signup')
+    path('admin/signup/', signup, name='signup'),
 ]

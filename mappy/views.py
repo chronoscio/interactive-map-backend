@@ -13,6 +13,8 @@ from .forms import SignUpForm
 from django.contrib.auth import login, authenticate
 from datetime import date
 from dateutil.parser import parse
+from shape_engine.shape_responder import ShpResponder
+from rest_framework.decorators import detail_route
 
 class StateViewSet(ReadOnlyModelViewSet):
     serializer_class = StateSerializer
@@ -33,6 +35,18 @@ class ShapeViewSet(ReadOnlyModelViewSet):
     serializer_class = ShapeSerializer
     queryset = Shape.objects.all()
 
+    #TODO Add api for getting possible dates
+
+    @detail_route(methods=['get'])
+    def download(self, request, pk=None):
+        print('test')
+        queryset = Shape.objects.all()
+        if pk is not None:
+            queryset = queryset.filter(pk=pk)
+            
+        shp_response = ShpResponder(queryset, geo_field='shape', file_name='shapefile' )
+
+        return shp_response()
 
     def get_queryset(self):
         queryset = Shape.objects.all()

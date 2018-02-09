@@ -24,13 +24,12 @@ class ShapeForm(forms.ModelForm):
     def clean(self):
         form_data = self.cleaned_data
         if form_data['shape_file'] == None and form_data['shape'] == None :
-            raise forms.ValidationError("You need to have a value in either shape file or shape ") # Will raise a error message
+            raise forms.ValidationError("You need to have a value in either shape file or shape ")
         return form_data
 
 
     def save(self, commit=True):
         modal = super(ShapeForm, self).save(commit=False)
-        print(self.cleaned_data['shape_file'])
         if not self.cleaned_data['shape_file'] == None:
             shape_file = self.cleaned_data['shape_file']
             working_dir = mkdtemp()
@@ -59,14 +58,13 @@ class ShapeForm(forms.ModelForm):
 
                 if len(polygons) > 0:
                     multipoly = geos.MultiPolygon(polygons)
-                    modal, created = Shape.objects.get_or_create(state=state, shape=multipoly, source=source, start_date=start_date, end_date=end_date)
-
+                    modal.shape = multipoly
             except:
                 shutil.rmtree(working_dir)
                 print("Error when converting shape file.")
 
         if commit == True:
-            m.save()
+            modal.save()
         return modal
 
     class Meta:

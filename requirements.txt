@@ -9,7 +9,9 @@ pylint==1.8.1
 pytz==2017.3
 six==1.11.0
 wrapt==1.10.11
-python-dateutil=2.6.1
-django-cors-headers=2.1.0
-django-reversion=2.0.13
-django-reversion-compare=0.8.3
+python-dateutil==2.6.1
+django-cors-headers==2.1.0
+django-reversion==2.0.13
+django-reversion-compare==0.8.3
+fiona==1.7.11
+git+https://github.com/ataalik/django-shape-engine.git
