@@ -19,6 +19,8 @@ export $(shell sed 's/=.*//' $(dpl))
 # grep the version from the mix file
 VERSION=$(shell ./bin/version.sh)
 
+FRONTEND_REPO=${PATH_TO_FRONTEND_REPO}
+
 # HELP
 # This will output the help for each task
 # thanks to https://marmelab.com/blog/2016/02/29/auto-documented-makefile.html
@@ -30,7 +32,6 @@ help: ## This help.
 .DEFAULT_GOAL := help
 
 
-
 # DOCKER TASKS
 
 # Build the container
@@ -39,7 +40,7 @@ image_app:
 	$(DOCKER) build -t $(APP_NAME) .
 
 image_static:
-	$(DOCKER) build -t $(STATIC_APP_NAME) staticserver
+	$(DOCKER) build -t $(STATIC_APP_NAME) $(FRONTEND_REPO)
 
 image: image_app image_static
 
