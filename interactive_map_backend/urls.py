@@ -20,8 +20,8 @@ from rest_framework.routers import DefaultRouter
 from mappy.views import StateViewSet, ShapeViewSet, signup
 
 router = DefaultRouter(trailing_slash=False)
-router.register('states', StateViewSet)
-router.register('shapes', ShapeViewSet)
+router.register('states', StateViewSet, base_name='state')
+router.register('shapes', ShapeViewSet, base_name='shape')
 
 urlpatterns = [
     path('admin/', admin.site.urls),

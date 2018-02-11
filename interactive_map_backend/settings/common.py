@@ -19,13 +19,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'g!u^)n56qhgmyv+2ey_9i6t!c3n_*fonp154d^++yzi3d_lw58'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
+# For running on c9.io
+ALLOWED_HOSTS = ['interactive-map-backend-dwaxe.c9users.io']
 
 
 # Application definition
@@ -39,6 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.gis',
     'rest_framework',
+    'rest_framework_gis',
     'mappy.apps.MappyConfig',
     'corsheaders',
     'reversion',
@@ -82,27 +79,13 @@ CORS_ORIGIN_WHITELIST = (
 
 )
 
-# Database
-# https://docs.djangoproject.com/en/2.0/ref/settings/#databases
-
-# TODO: Dockerize and add Postgres+PostGIS
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'NAME': 'interactivemap',
-        'USER': 'dwaxe',
-        'PASSWORD': 'asdf1234',
-        'HOST': 'localhost',
-        'PORT': '',
-    }
-}
 
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': (
         'rest_framework.renderers.JSONRenderer',
+        'rest_framework.renderers.BrowsableAPIRenderer',
     )
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
@@ -143,3 +126,21 @@ ADD_REVERSION_ADMIN=True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Environment variables to be overridden:
+os.environ.setdefault("DB_DEFAULT_HOST", "localhost")
+os.environ.setdefault("DB_DEFAULT_PORT", "5432")
+os.environ.setdefault("DB_DEFAULT_NAME", "interactivemap")
+os.environ.setdefault("DB_DEFAULT_USER", "")
+os.environ.setdefault("DB_DEFAULT_PASSWORD", "")
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': os.environ['DB_DEFAULT_NAME'],
+        'USER': os.environ['DB_DEFAULT_USER'],
+        'PASSWORD': os.environ['DB_DEFAULT_PASSWORD'],
+        'HOST': os.environ['DB_DEFAULT_HOST'],
+        'PORT': os.environ['DB_DEFAULT_PORT'],
+    }
+}
