@@ -62,13 +62,20 @@ stop: ## Stop running containers
 rm: stop ## Stop and remove running containers
 	$(DOCKER) rm $(APP_NAME)
 
-export:
+export_app:
 	$(DOCKER) save $(APP_NAME) > $(IMAGE_SAVE_DIR)/$(APP_NAME).tar
+export_static:
 	$(DOCKER) save $(STATIC_APP_NAME) > $(IMAGE_SAVE_DIR)/$(STATIC_APP_NAME).tar
 
-import:
+export: export_app, export_static
+
+import_app:
 	$(DOCKER) load -i $(REMOTE_IMAGE_DIR)/$(APP_NAME).tar
+
+import_static:
 	$(DOCKER) load -i $(REMOTE_IMAGE_DIR)/$(STATIC_APP_NAME).tar
+
+import: import_app, import_static
 
 upload_app:
 	rsync -azP $(IMAGE_SAVE_DIR)/$(APP_NAME).tar $(REMOTE_USER)@$(REMOTE_HOST):$(REMOTE_IMAGE_DIR)/$(APP_NAME).tar
