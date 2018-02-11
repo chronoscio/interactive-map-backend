@@ -14,30 +14,30 @@ from django.contrib.auth import login, authenticate
 from datetime import date
 from dateutil.parser import parse
 
+
 class StateViewSet(ReadOnlyModelViewSet):
     serializer_class = StateSerializer
     queryset = State.objects.all()
 
-    def list(self, request, pk=None):
-        states = get_list_or_404(State)
-        if('date' in request.query_params):
-            date = request.query_params['date']
+    def get_queryset(self):
+        # Prefetches the shapes to make the state.start_date computation faster
+        queryset = State.objects.all().prefetch_related('shape_set')
+        date = self.request.query_params.get('date', None)
+        if date:
             date = parse(date).date()
-            states = [state for state in states if(state.start_date <= date and state.end_date >= date) ]
-        serializer = StateSerializer(states, many=True)
-        return Response(serializer.data)
-
+            queryset = [state for state in queryset if (state.start_date <= date and state.end_date >= date)]
+        return queryset
 
 
 class ShapeViewSet(ReadOnlyModelViewSet):
     serializer_class = ShapeSerializer
     queryset = Shape.objects.all()
 
-
     def get_queryset(self):
         queryset = Shape.objects.all()
         date = self.request.query_params.get('date', None)
         if date is not None:
+            date = parse(date).date()
             queryset = queryset.filter(start_date__lte=date, end_date__gte=date)
         return queryset
 

@@ -6,7 +6,8 @@ from .models import State, Shape, Event
 class StateSerializer(ModelSerializer):
     class Meta:
         model = State
-        fields = '__all__'
+        # Must enumerate to display the start_date and end_date because they're properties
+        fields = ('name', 'aliases', 'description', 'successors', 'color', 'start_date', 'end_date')
 
 
 class ShapeSerializer(ModelSerializer):
