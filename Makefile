@@ -75,7 +75,7 @@ import_app:
 import_static:
 	$(DOCKER) load -i $(REMOTE_IMAGE_DIR)/$(STATIC_APP_NAME).tar
 
-import: import_app, import_static
+import: import_app import_static
 
 upload_app:
 	rsync -azP $(IMAGE_SAVE_DIR)/$(APP_NAME).tar $(REMOTE_USER)@$(REMOTE_HOST):$(REMOTE_IMAGE_DIR)/$(APP_NAME).tar
