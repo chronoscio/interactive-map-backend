@@ -66,6 +66,10 @@ export:
 	$(DOCKER) save $(APP_NAME) > $(IMAGE_SAVE_DIR)/$(APP_NAME).tar
 	$(DOCKER) save $(STATIC_APP_NAME) > $(IMAGE_SAVE_DIR)/$(STATIC_APP_NAME).tar
 
+import:
+	$(DOCKER) load -i $(REMOTE_IMAGE_DIR)/$(APP_NAME).tar
+	$(DOCKER) load -i $(REMOTE_IMAGE_DIR)/$(STATIC_APP_NAME).tar
+
 upload_app:
 	rsync -azP $(IMAGE_SAVE_DIR)/$(APP_NAME).tar $(REMOTE_USER)@$(REMOTE_HOST):$(REMOTE_IMAGE_DIR)/$(APP_NAME).tar
 
