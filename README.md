@@ -14,9 +14,15 @@
 * ALTER ROLE dwaxe SET default_transaction_isolation TO 'read committed';
 * ALTER ROLE dwaxe SET timezone TO 'UTC';
 * GRANT ALL PRIVILEGES ON DATABASE interactivemap TO dwaxe;
+* ALTER USER dwaxe CREATEDB;
+* ALTER ROLE dwaxe SUPERUSER;
 3. data setup:
 * ./manage.py migrate
 * ./manage.py loaddata france
 * ./manage.py createsuperuser
 4. running:
-* In c9.io: `./manage.py runserver $IP:$PORT`
+* In c9.io: ./manage.py runserver $IP:$PORT
+* Visit https://interactive-map-backend-dwaxe.c9users.io/
+5. Testing:
+* ./manage.py test
+* The CREATEDB and SUPERUSER permissions are required to run tests in postgres
