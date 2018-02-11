@@ -8,6 +8,7 @@ RUN set -ex \
         --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing \
         gdal-dev \
         geos-dev \
+        proj4-dev \
     && apk add --no-cache --virtual .build-deps \
             gcc \
             make \
