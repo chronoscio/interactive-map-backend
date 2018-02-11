@@ -25,7 +25,8 @@ SECRET_KEY = 'g!u^)n56qhgmyv+2ey_9i6t!c3n_*fonp154d^++yzi3d_lw58'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# For running on c9.io
+ALLOWED_HOSTS = ['interactive-map-backend-dwaxe.c9users.io']
 
 
 # Application definition
@@ -100,6 +101,7 @@ DATABASES = {
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': (
         'rest_framework.renderers.JSONRenderer',
+        'rest_framework.renderers.BrowsableAPIRenderer',
     )
 }
 
