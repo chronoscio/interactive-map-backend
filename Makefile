@@ -67,7 +67,7 @@ export_app:
 export_static:
 	$(DOCKER) save $(STATIC_APP_NAME) > $(IMAGE_SAVE_DIR)/$(STATIC_APP_NAME).tar
 
-export: export_app, export_static
+export: export_app export_static
 
 import_app:
 	$(DOCKER) load -i $(REMOTE_IMAGE_DIR)/$(APP_NAME).tar
