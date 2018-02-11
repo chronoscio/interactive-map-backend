@@ -1,8 +1,8 @@
 DOCKER=docker
 COMPOSE=docker-compose
-APP_NAME="interactivemap"
-STATIC_APP_NAME="imap_static"
-DB_SERVER="imap_pg"
+APP_NAME=interactivemap
+STATIC_APP_NAME=imap_static
+DB_SERVER=imap_pg
 
 # import config.
 # You can change the default config with `make cnf="config_special.env" build`
@@ -44,16 +44,12 @@ image_static:
 
 image: image_app image_static
 
-run: stop ## Run container on port configured in `config.env`
-	$(DOCKER) run -i -t --rm --env-file=./config.env -p=$(PORT):$(PORT) --name="$(APP_NAME)" $(APP_NAME)
-
-
-dev: ## Run container in development mode
-	$(COMPOSE) build --no-cache $(APP_NAME) && $(COMPOSE) run $(APP_NAME)
+run: stop
+	$(COMPOSE) up --build -d
 
 # Build and run the container
-up: ## Spin up the project with the database
-	$(COMPOSE) up --build
+up: ## Spin up the project with the database and static server
+	$(COMPOSE) up --build --abort-on-container-exit
 
 app: ## Spin up the project
 	$(COMPOSE) up --build $(APP_NAME)
@@ -66,8 +62,17 @@ stop: ## Stop running containers
 rm: stop ## Stop and remove running containers
 	$(DOCKER) rm $(APP_NAME)
 
-clean: ## Clean the generated/compiles files
-	echo "nothing clean ..."
+export:
+	$(DOCKER) save $(APP_NAME) > $(IMAGE_SAVE_DIR)/$(APP_NAME).tar
+	$(DOCKER) save $(STATIC_APP_NAME) > $(IMAGE_SAVE_DIR)/$(STATIC_APP_NAME).tar
+
+upload_app:
+	rsync -azP $(IMAGE_SAVE_DIR)/$(APP_NAME).tar $(REMOTE_USER)@$(REMOTE_HOST):$(REMOTE_IMAGE_DIR)/$(APP_NAME).tar
+
+upload_static:
+	rsync -azP $(IMAGE_SAVE_DIR)/$(STATIC_APP_NAME).tar $(REMOTE_USER)@$(REMOTE_HOST):$(REMOTE_IMAGE_DIR)/$(STATIC_APP_NAME).tar
+
+upload: upload_static upload_app
 
 # Docker release - build, tag and push the container
 release: build publish ## Make a release by building and publishing the `{version}` ans `latest` tagged containers to ECR
