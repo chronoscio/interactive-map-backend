@@ -17,7 +17,6 @@ from dateutil.parser import parse
 
 class StateViewSet(ReadOnlyModelViewSet):
     serializer_class = StateSerializer
-    queryset = State.objects.all()
 
     def get_queryset(self):
         # Prefetches the shapes to make the state.start_date computation faster
@@ -31,7 +30,6 @@ class StateViewSet(ReadOnlyModelViewSet):
 
 class ShapeViewSet(ReadOnlyModelViewSet):
     serializer_class = ShapeSerializer
-    queryset = Shape.objects.all()
 
     def get_queryset(self):
         queryset = Shape.objects.all()

@@ -19,4 +19,4 @@
 * ./manage.py loaddata france
 * ./manage.py createsuperuser
 4. running:
-* In c9.io: `python manage.py runserver $IP:$PORT`
+* In c9.io: `./manage.py runserver $IP:$PORT`
