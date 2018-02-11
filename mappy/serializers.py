@@ -7,7 +7,7 @@ class StateSerializer(ModelSerializer):
     class Meta:
         model = State
         # Must enumerate to display the start_date and end_date because they're properties
-        fields = ('name', 'aliases', 'description', 'successors', 'color', 'start_date', 'end_date')
+        fields = ('id', 'name', 'aliases', 'description', 'successors', 'color', 'start_date', 'end_date')
 
 
 class ShapeSerializer(ModelSerializer):
