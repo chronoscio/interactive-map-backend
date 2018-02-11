@@ -11,15 +11,8 @@ class StateSerializer(ModelSerializer):
 
 class ShapeSerializer(ModelSerializer):
     """
-    Shape is in WKT format
+    Shape is in geoJSON format
     """
-
-    geoJson = SerializerMethodField()
-
-
-    def get_geoJson(self, obj):
-        return obj.shape.json
-
     class Meta:
         model = Shape
         fields = '__all__'
