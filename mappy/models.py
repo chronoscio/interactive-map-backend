@@ -1,5 +1,4 @@
-from django.core.exceptions import ValidationError
-from django.utils.translation import gettext_lazy as _
+from datetime import date
 from django.db.models import Model, TextField, DateField, ForeignKey, ManyToManyField, CASCADE, SET_NULL, FileField
 # Never use Charfield. Always use TextField. Postgres treats them the same anyways
 from django.contrib.gis.db.models import MultiPolygonField
@@ -35,11 +34,13 @@ class State(Model):
 
     @property
     def start_date(self):
-        return self.shape_set.order_by('start_date').first().start_date
+        first_shape = self.shape_set.order_by('start_date').first()
+        return first_shape.start_date if first_shape else date(1, 1, 1)
 
     @property
     def end_date(self):
-        return self.shape_set.order_by('end_date').last().end_date
+        last_shape = self.shape_set.order_by('end_date').first()
+        return last_shape.end_date if last_shape else date(1, 1, 1)
 
     def get_bordering_states(self, date):
         """
@@ -65,9 +66,6 @@ class Shape(Model):  # Should this just be called Border?
     A Shape may optionally have Events attached to its start_date and end_date.
     """
     state = ForeignKey(State, on_delete=CASCADE)
-    # TODO: Figure out the right way to store the shapefile here. PolygonField feels like the right approach, but is it?
-    # Progress! It will probably involve LayerMapping (https://docs.djangoproject.com/en/2.0/ref/contrib/gis/tutorial/#importing-spatial-data)
-    # TODO: Add this field once this app is dockerized and Postgres + PostGIS are working
     shape = MultiPolygonField(blank=True, null=True)
     source = TextField(help_text='Citation for where you found this map. Guide: http://rmit.libguides.com/harvardvisual/maps.')
     start_date = DateField(help_text='When this border takes effect.')
